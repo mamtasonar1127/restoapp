@@ -3,10 +3,11 @@
 @section('content')
 <div class="col-sm-6">
     <h1>Edit Restaurant</h1>
-    <form method="post" action="addRestuarant">
+    <form method="post" action="/edit">
     @csrf
         <div class="form-group">
             <label>Restuarant Name</label>
+            <input type="hidden" class="form-control" name="id" value="{{$data->id}}">
             <input type="text" class="form-control" name="restuarantname" value="{{$data->name}}" placeholder="Enter Name">
         </div>
         <div class="form-group">
@@ -17,7 +18,7 @@
             <label>Address</label>
             <input type="text"  name="address" class="form-control" value="{{$data->address}}" placeholder="Enter address">
         </div>
-        <button type="submit" class="btn btn-primary">Add Restaurant</button>
+        <button type="submit" class="btn btn-primary">Update</button>
     </form>
 </div>
 @stop
