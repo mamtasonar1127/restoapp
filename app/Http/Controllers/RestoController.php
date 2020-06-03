@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Restaurant;
 Use Session;
+Use App\User;
+use Crypt;
 
 class RestoController extends Controller
 {
@@ -54,6 +56,20 @@ class RestoController extends Controller
         $resto->save();
         $req->session()->flash('status','Restaurant updated Successfully');
         return redirect('list');
+    }
+    function register(Request $req)
+    {
+        //echo Crypt::encrypt('123@abc');
+        //return $req->input();
+
+        $user = new User;
+        $user->name=$req->input('name');
+        $user->email=$req->input('email');
+        $user->contact=$req->input('contact');
+        $user->password=Crypt::encrypt($req->input('password'));
+        $user->save();
+        $req->session()->put('user',$req->input('name'));
+        return redirect('/');
     }
 
     

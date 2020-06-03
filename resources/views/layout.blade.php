@@ -9,20 +9,23 @@
     </head>
     <body>
     <header>
-            <nav class="navbar navbar-expand-sm navbar-light bg-light">
+        <nav class="navbar navbar-expand-sm navbar-light bg-light">
         <a class="navbar-brand" href="#">Bistro</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-            <a class="nav-item nav-link active" href="/">Home <span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link" href="/list">List</a>
-            <a class="nav-item nav-link" href="/addRestuarant">Add Restaurant</a>
-            <a class="nav-item nav-link" href="#">Search</a>
-            <a class="nav-item nav-link" href="#">Login</a>
-            <a class="nav-item nav-link" href="#">Register</a>
-            
+                <a class="nav-item nav-link active" href="/">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="/list">List</a>
+                <a class="nav-item nav-link" href="/addRestuarant">Add Restaurant</a>
+                <a class="nav-item nav-link" href="#">Search</a>
+                @if(Session::get('user'))
+                <a class="nav-item nav-link" href="#">Hello, {{Session::get('user')}}</a>
+                @else 
+                <a class="nav-item nav-link" href="#">Login</a>
+                <a class="nav-item nav-link" href="/register">Register</a>
+                @endif     
             </div>
         </div>
         </nav>
