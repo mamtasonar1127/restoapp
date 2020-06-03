@@ -17,7 +17,7 @@
             <div class="navbar-nav">
             <a class="nav-item nav-link active" href="/">Home <span class="sr-only">(current)</span></a>
             <a class="nav-item nav-link" href="/list">List</a>
-            <a class="nav-item nav-link" href="#">Add Restuarant</a>
+            <a class="nav-item nav-link" href="/addRestuarant">Add Restuarant</a>
             <a class="nav-item nav-link" href="#">Search</a>
             <a class="nav-item nav-link" href="#">Login</a>
             <a class="nav-item nav-link" href="#">Register</a>
@@ -26,7 +26,7 @@
         </div>
         </nav>
     </header>
-   <div>
+   <div class="container">
         @yield('content')
     </div>
     
