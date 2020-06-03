@@ -32,6 +32,7 @@
       <td>{{$item->address}}</td>
       <td>{{$item->email}}</td>
       <td><a href="delete/{{$item->id}}"><i class="fa fa-trash"></i></a></td>
+      <td><a href="edit/{{$item->id}}"><i class="fa fa-edit"></i></a></td>
     </tr>
     @endforeach
   </tbody>

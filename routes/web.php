@@ -22,4 +22,5 @@ Route::get('/list', 'RestoController@list');
 Route::post('/addRestuarant','RestoController@addRestuarant');
 Route::view('addRestuarant','addRestuarant');
 Route::get('/delete/{id}','RestoController@delete');
+Route::get('/edit/{id}','RestoController@edit');
 

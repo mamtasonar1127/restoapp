@@ -38,4 +38,9 @@ class RestoController extends Controller
        Session::flash('status','Restaurant Deleted Successfully');
         return redirect('list');
     }
+    function edit($id)
+    {
+       $data= Restaurant::find($id);
+       return view('edit',['data'=>$data]);
+    }
 }
