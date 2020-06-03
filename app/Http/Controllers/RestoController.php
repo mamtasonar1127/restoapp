@@ -9,6 +9,7 @@ Use Session;
 Use App\User;
 use Crypt;
 
+
 class RestoController extends Controller
 {
     //
@@ -81,5 +82,11 @@ class RestoController extends Controller
         }
     }
 
+    function logout() {
+        session()->forget('user');
+        return view('login');
+     }
+    
+    
     
 }

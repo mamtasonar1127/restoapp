@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
+Route::group(['middleware'=>"web"],function(){
 Route::get('/', 'RestoController@index');
 Route::get('/list', 'RestoController@list');
 Route::post('/addRestuarant','RestoController@addRestuarant');
@@ -28,3 +29,8 @@ Route::view('register','register');
 Route::post('register','RestoController@register');
 Route::view('login','login');
 Route::post('login','RestoController@login');
+Route::get('logout','RestoController@logout');
+
+});
+
+

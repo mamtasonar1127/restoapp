@@ -22,9 +22,11 @@
                 <a class="nav-item nav-link" href="#">Search</a>
                 @if(Session::get('user'))
                 <a class="nav-item nav-link" href="#">Hello, {{Session::get('user')}}</a>
+                <a class="nav-item nav-link" href="logout">logout</a>
                 @else 
                 <a class="nav-item nav-link" href="login">Login</a>
                 <a class="nav-item nav-link" href="/register">Register</a>
+
                 @endif     
             </div>
         </div>
