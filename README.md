@@ -1,3 +1,9 @@
+<p>RestoApp allow admin to add restuarant details</p>
+<p>Technology: Laravel, Xampp</p>
+
+
+
+
 <p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
 
 <p align="center">
